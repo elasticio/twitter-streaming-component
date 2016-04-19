@@ -33,9 +33,9 @@
       "fields": {
         "languages":{
           "viewClass":"TextFieldWithNoteView",
-          "label": "Consumer Secret",
-          "note": "Comma-separated list of BCP 47 language identifiers",
-          "default": "en,de,fr,es",
+          "label": "Languages",
+          "note": "Comma-separated list of BCP 47 language identifiers, e.g. 'en,de,fr'",
+          "placeholder": "en,de,fr,es",
           "required": true
         }
       },
