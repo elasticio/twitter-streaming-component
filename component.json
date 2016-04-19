@@ -1,0 +1,13 @@
+{
+  "title": "Twitter Streaming Component",
+  "description": "A component that speaks to twitter streaming API",
+  "credentials": {
+    "fields": {
+      "name": {
+        "label": "My API Key",
+        "required": true,
+        "viewClass": "TextFieldView"
+      }
+    }
+  }
+}
