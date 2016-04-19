@@ -23,7 +23,7 @@
       "main": "./lib/triggers/firehouse_sample.js",
       "type": "polling",
       "metadata": {
-        "out": "./tweet.json"
+        "out": "./lib/schemas/tweet.json"
       }
     }
   }
