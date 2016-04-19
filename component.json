@@ -3,10 +3,27 @@
   "description": "A component that speaks to twitter streaming API",
   "credentials": {
     "fields": {
-      "name": {
-        "label": "My API Key",
-        "required": true,
-        "viewClass": "TextFieldView"
+      "oauth": {
+        "viewClass": "OAuthFieldView",
+        "label": "Twitter Account",
+        "required": true
+      }
+    },
+    "oauth1": {
+      "consumer_key": "{{TWITTER_API_KEY}}",
+      "consumer_secret": "{{TWITTER_API_SECRET}}",
+      "request_token_uri": "https://api.twitter.com/oauth/request_token",
+      "auth_uri": "https://api.twitter.com/oauth/authorize",
+      "access_token_uri": "https://api.twitter.com/oauth/access_token"
+    }
+  },
+  "triggers": {
+    "mentions_timeline": {
+      "title": "Firehouse Sample",
+      "main": "./lib/triggers/firehouse_sample.js",
+      "type": "polling",
+      "metadata": {
+        "out": "./tweet.json"
       }
     }
   }

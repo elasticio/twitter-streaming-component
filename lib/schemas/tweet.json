@@ -1,0 +1,54 @@
+{
+  "type": "object",
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "properties": {
+    "created_at": {
+      "type": "string",
+      "title": "Create Date",
+      "id": "created_at",
+      "required": true
+    },
+    "id": {
+      "type": "number",
+      "title": "Tweet Id",
+      "id": "id",
+      "required": true
+    },
+    "text": {
+      "type": "string",
+      "title": "Text",
+      "id": "text",
+      "required": true
+    },
+    "user": {
+      "type": "object",
+      "required": true,
+      "properties": {
+        "id": {
+          "type": "number",
+          "title": "User Id",
+          "id": "id",
+          "required": true
+        },
+        "location": {
+          "type": "string",
+          "title": "User Location",
+          "id": "location",
+          "required": true
+        },
+        "name": {
+          "type": "string",
+          "title": "User Name",
+          "id": "name",
+          "required": true
+        },
+        "screen_name": {
+          "type": "string",
+          "title": "User Screen Name",
+          "id": "screen_name",
+          "required": true
+        }
+      }
+    }
+  }
+}
