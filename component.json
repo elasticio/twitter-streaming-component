@@ -3,18 +3,26 @@
   "description": "A component that speaks to twitter streaming API",
   "credentials": {
     "fields": {
-      "oauth": {
-        "viewClass": "OAuthFieldView",
-        "label": "Twitter Account",
+      "consumerKey":{
+        "viewClass":"TextFieldView",
+        "label":"Consumer Key",
+        "required": true
+      },
+      "consumerSecret":{
+        "viewClass":"TextFieldView",
+        "label":"Consumer Secret",
+        "required": true
+      },
+      "accessTokenKey":{
+        "viewClass":"TextFieldView",
+        "label":"Access Token Key",
+        "required": true
+      },
+      "accessTokenSecret":{
+        "viewClass":"TextFieldView",
+        "label":"Consumer Secret",
         "required": true
       }
-    },
-    "oauth1": {
-      "consumer_key": "{{TWITTER_API_KEY}}",
-      "consumer_secret": "{{TWITTER_API_SECRET}}",
-      "request_token_uri": "https://api.twitter.com/oauth/request_token",
-      "auth_uri": "https://api.twitter.com/oauth/authorize",
-      "access_token_uri": "https://api.twitter.com/oauth/access_token"
     }
   },
   "triggers": {
@@ -22,6 +30,15 @@
       "title": "Firehouse Sample",
       "main": "./lib/triggers/firehouse_sample.js",
       "type": "polling",
+      "fields": {
+        "languages":{
+          "viewClass":"TextFieldWithNoteView",
+          "label": "Consumer Secret",
+          "note": "Comma-separated list of BCP 47 language identifiers",
+          "default": "en,de,fr,es",
+          "required": true
+        }
+      },
       "metadata": {
         "out": "./lib/schemas/tweet.json"
       }
