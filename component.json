@@ -1,6 +1,7 @@
 {
   "title": "Twitter Streaming Component",
   "description": "A component that speaks to twitter streaming API",
+  "version": "1.0.1",
   "deprecated": true,
   "credentials": {
     "fields": {
